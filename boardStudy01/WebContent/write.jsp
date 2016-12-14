@@ -6,16 +6,20 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 </head>
+
+
+
 <body>
-	<form action="index.html" method="post" onsubmit="return formCheck();">
+	<form action="insert.jsp" method="post" onsubmit="return formCheck();">
 		title : <input type="text" name="title" /><br/>
 		write : <input type="text" name="writer" /><br/>
 		content : <textarea rows="10" cols="20" name="content"></textarea><br>
 		regdate : <input type="text" name="regdate" /><br/>
 		<input type="submit" />
 	</form>
-	http://cusmaker.tistory.com/48
+	
 	<script>
+	/*
 		function formCheck() {
 		 
 		    var title = document.forms[0].title.value;        // 사용하기 쉽도록 변수를 선언하여 담아주고,
@@ -52,6 +56,7 @@
 	   		}
 	 
 		} // function end
+		*/
 	</script>
 </body>
 </html>
