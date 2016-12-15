@@ -6,10 +6,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>본격! 게시판 - 게시글 올리기</title>
 </head>
 <%
-	request.setCharacterEncoding("utf-8");
+	request.setCharacterEncoding("UTF-8");
  
     int idx = 1;
  
@@ -40,9 +40,9 @@
     
     try {
     	 
-        String driverName = "com.mysql.jdbc.Driver"; //데이터베이스에 접속하기위한 드라이버를 로드합니다.
+        String driverName = "com.mysql.jdbc.Driver"; 
     
-        String url = "jdbc:mysql://localhost:3306/board";            //접속 URL정보와 포트번호(oracle포트), sid(oracle버전)
+        String url = "jdbc:mysql://localhost:3306/board?useUnicode=true&characterEncoding=UTF-8";  
     
     
     
@@ -58,9 +58,10 @@
         
                        "(TITLE, WRITER, REGDATE, COUNT, CONTENTS) "+
         
-                       "VALUES ("+"'"+title+"', '"+writer+"', '"+regdate+"', '1', '"+content+"')";
+                       "VALUES ("+"'"+title+"', '"+writer+"' , now(), '1', '"+content+"')";
         
-       stmt.executeUpdate(sql);                                                // 쿼리를 실행합니다.                                             // 쿼리를 실행합니다.
+       stmt.executeUpdate(sql);                                                // 쿼리를 실행합니다.
+	   System.out.println(sql);
         
         con.close();
     
@@ -72,6 +73,10 @@
     
         e.printStackTrace();
     
+   } finally{
+	   
+       out.print("<script>location.href='index.jsp';</script>");
+
    }
  
 %>

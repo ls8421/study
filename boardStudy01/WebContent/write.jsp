@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>본격! 게시판 - 게시글 쓰기</title>
 </head>
 
 
@@ -14,7 +14,6 @@
 		title : <input type="text" name="title" /><br/>
 		write : <input type="text" name="writer" /><br/>
 		content : <textarea rows="10" cols="20" name="content"></textarea><br>
-		regdate : <input type="text" name="regdate" /><br/>
 		<input type="submit" />
 	</form>
 	
